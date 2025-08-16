@@ -1,39 +1,54 @@
-### Documentation is included in the Documentation folder ###
+## Overview
+This project is an implementation of the **Calculate Client Security Hash** assignment from **UiPath Academy – Advanced RPA Developer course**.  
+It is built using the **Robotic Enterprise Framework (REF)** and demonstrates end-to-end automation of logging into the **ACME Test website**, retrieving client details, and calculating their security hash.
 
+---
 
-### REFrameWork Template ###
-**Robotic Enterprise Framework**
+## Features
+- Built on **Robotic Enterprise Framework (REF)**.
+- Automates the **ACME System 1** login and navigation.
+- Reads **WI5 (Work Items - Type 5)** from ACME Test.
+- Extracts client details (ID, Name, Country).
+- Generates the **Security Hash** using SHA1 encryption.
+- Updates the result back into the ACME System.
+- Provides transaction logging, exception handling, and retry mechanisms via REF.
 
-* Built on top of *Transactional Business Process* template
-* Uses *State Machine* layout for the phases of automation project
-* Offers high level logging, exception handling and recovery
-* Keeps external settings in *Config.xlsx* file and Orchestrator assets
-* Pulls credentials from Orchestrator assets and *Windows Credential Manager*
-* Gets transaction data from Orchestrator queue and updates back status
-* Takes screenshots in case of system exceptions
+---
 
+## Workflow Description
+1. **Initialization (Init State)**  
+   - Reads configuration from `Config.xlsx`.  
+   - Opens the ACME Test web application.  
+   - Initializes Orchestrator queues and assets.  
 
-### How It Works ###
+2. **Get Transaction Data**  
+   - Retrieves **WI5 transactions** from the ACME Test Work Items.  
 
-1. **INITIALIZE PROCESS**
- + ./Framework/*InitiAllSettings* - Load configuration data from Config.xlsx file and from assets
- + ./Framework/*GetAppCredential* - Retrieve credentials from Orchestrator assets or local Windows Credential Manager
- + ./Framework/*InitiAllApplications* - Open and login to applications used throughout the process
+3. **Process Transaction**  
+   - Extracts Client ID, Name, and Country from each WI5.  
+   - Concatenates them in the format:  
+     ```
+     ClientID-ClientName-ClientCountry
+     ```
+   - Generates the **SHA1 hash** of this string.  
+   - Updates the corresponding Work Item with the generated hash.  
 
-2. **GET TRANSACTION DATA**
- + ./Framework/*GetTransactionData* - Fetches transactions from an Orchestrator queue defined by Config("OrchestratorQueueName") or any other configured data source
+4. **End Process**  
+   - Closes applications.  
+   - Logs final results.  
 
-3. **PROCESS TRANSACTION**
- + *Process* - Process trasaction and invoke other workflows related to the process being automated 
- + ./Framework/*SetTransactionStatus* - Updates the status of the processed transaction (Orchestrator transactions by default): Success, Business Rule Exception or System Exception
+---
+## Requirements
+- **UiPath Studio** (tested with the version you used)  
+- **UiPath Orchestrator** (optional but recommended)  
+- **ACME Test website credentials** (training site: https://acme-test.uipath.com)  
+- `Config.xlsx` properly configured with system URLs, queues, and assets  
 
-4. **END PROCESS**
- + ./Framework/*CloseAllApplications* - Logs out and closes applications used throughout the process
+---
 
-
-### For New Project ###
-
-1. Check the Config.xlsx file and add/customize any required fields and values
-2. Implement InitiAllApplications.xaml and CloseAllApplicatoins.xaml workflows, linking them in the Config.xlsx fields
-3. Implement GetTransactionData.xaml and SetTransactionStatus.xaml according to the transaction type being used (Orchestrator queues by default)
-4. Implement Process.xaml workflow and invoke other workflows related to the process being automated
+## How to Run
+1. Open the project in UiPath Studio.  
+2. Update `Config.xlsx` with your Orchestrator settings and ACME Test credentials.  
+3. Publish or run the project.  
+4. Monitor execution logs in UiPath Orchestrator (if connected).  
+5. Verify updated **WI5 items** in ACME Test with their calculated hashes.  
