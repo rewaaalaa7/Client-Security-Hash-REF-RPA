@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="System1_Navigate_To_WIDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_System1URL" Type="InArgument(x:String)" />
+    <x:Property Name="in_Navigate_to_WIID_URL" Type="InArgument(x:String)" />
     <x:Property Name="in_WIID" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -84,15 +84,17 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_Navigate_To_WIDetails" sap:VirtualizedContainerService.HintSize="924.4000000000001,738.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_Navigate_To_WIDetails" sap:VirtualizedContainerService.HintSize="924.4000000000001,698.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="534.4,715.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="534.4,675.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="work_item_URL" />
       </Sequence.Variables>
@@ -101,7 +103,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe ACME'" sap:VirtualizedContainerService.HintSize="500.8,501.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8c71da6efa675d2ba8c2a46a4acd0d02" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe ACME'" sap:VirtualizedContainerService.HintSize="500.8,461.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cca748bc352afc210f71c8fd8173d109" Selector="&lt;html app='msedge.exe' title='*ACME*System*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -118,7 +120,7 @@
                   <OutArgument x:TypeArguments="x:String">[work_item_URL]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[in_System1URL + "work-items/" + in_WIID]</InArgument>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[in_Navigate_to_WIID_URL  + in_WIID]</InArgument>
                 </Assign.Value>
               </Assign>
               <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To - work item details page" sap:VirtualizedContainerService.HintSize="433.6,108.8" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[work_item_URL]" />

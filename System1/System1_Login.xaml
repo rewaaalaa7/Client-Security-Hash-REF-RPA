@@ -109,15 +109,16 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="924.4000000000001,2278.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="1052.8,3028.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="516.8,2255.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="1052.8,3005.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="Dashboard_Exists" />
       </Sequence.Variables>
@@ -126,30 +127,18 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge ACME System 1 - Log In" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1276.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge ACME System 1 - Log In" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1019.2,1156.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1028" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,908" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="416,118.4" sap2010:WorkflowViewState.IdRef="Activate_1">
-                <ui:Activate.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9b464af2-c9e7-42a3-8717-9139a1e6ace7">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:Activate.Target>
-              </ui:Activate>
               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Text="[in_strUsername.Trim]" Version="V5">
                 <uix:NTypeInto.Target>
@@ -174,12 +163,17 @@
               </uix:NTypeInto>
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Text="[in_strPassword.Trim]" Version="V5">
                 <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="1936296b-e30c-46fb-8dfe-dba900e599cf" ContentHash="bXjcBNpAukO3kPS_o1P0pA" CvElementArea="341, 661, 610, 45" CvType="InputBox" DesignTimeRectangle="344, 664, 606, 42" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control ' aaname='Password:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="60c64751-8fb4-4834-836d-b06c471ad21b" InformativeScreenshot="b5a6ed203353542565f927d0fb47f41b.png" Reference="97LSBvNUAE6bl1u1a4QJHA/PPImkAQKR0WYpfrErQrg3A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="1936296b-e30c-46fb-8dfe-dba900e599cf" ContentHash="bXjcBNpAukO3kPS_o1P0pA" CvElementArea="341, 661, 610, 45" CvType="InputBox" DesignTimeRectangle="344, 664, 606, 42" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' class='form-control ' aaname='Password:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="60c64751-8fb4-4834-836d-b06c471ad21b" InformativeScreenshot="b5a6ed203353542565f927d0fb47f41b.png" Reference="97LSBvNUAE6bl1u1a4QJHA/PPImkAQKR0WYpfrErQrg3A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
                       <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target CVScreenId="1936296b-e30c-46fb-8dfe-dba900e599cf" CvTextArea="342, 634, 90, 17" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="344, 632, 89, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password:' /&gt;" Guid="848978f3-51e0-431d-816c-aa5c41b465be" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
+                    <uix:TargetAnchorable.WaitForReadyArgument>
+                      <InArgument x:TypeArguments="uix:NWaitForReady">
+                        <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="Interactive" />
+                      </InArgument>
+                    </uix:TargetAnchorable.WaitForReadyArgument>
                   </uix:TargetAnchorable>
                 </uix:NTypeInto.Target>
                 <uix:NTypeInto.VerifyOptions>
@@ -193,12 +187,12 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Version="V5">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login(2)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f48347dd-d1f6-4e72-859c-9e1d0d8d4c67" Version="V5">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="75006f44-aff4-4f80-aef5-e617b6c6a823" ContentHash="UnNFVTI5J0qfMgau9Q1l0Q" CvElementArea="341, 776, 79, 45" CvTextArea="357, 789, 46, 21" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="344, 778, 75, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" Guid="9d85ea4a-007b-4faf-8562-944bcd50136a" InformativeScreenshot="89c79c0c43ecd842c2e2798d5d1c4a8c.png" Reference="97LSBvNUAE6bl1u1a4QJHA/16HFAIbuIEO27c6msH2MVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" CVScreenId="84afdceb-c0f3-499a-9a7a-0d2b5d66904e" ContentHash="ObcQV--G1k-dIkuw_r6_rw" CvElementArea="341, 774, 79, 45" CvTextArea="357, 787, 46, 20" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="344, 777, 75, 42" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" Guid="53dfa798-a15b-4997-98e0-b4cd11036fb6" InformativeScreenshot="6df139599b37e8a01c7d896d6748dc09.png" Reference="97LSBvNUAE6bl1u1a4QJHA/O9Go_zkpjEumTzkg8p24Sg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target CVScreenId="75006f44-aff4-4f80-aef5-e617b6c6a823" CvTextArea="342, 636, 90, 16" CvTextArgument="Password:" CvType="Text" DesignTimeRectangle="344, 633, 89, 25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Password:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password:' /&gt;" Guid="cdd008ec-fa2a-4cd5-8fb4-81a552ed3ab4" SearchSteps="FuzzySelector, CV" />
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target CVScreenId="84afdceb-c0f3-499a-9a7a-0d2b5d66904e" CvElementArea="422, 774, 217, 45" CvTextArea="439, 787, 183, 20" CvTextArgument="Forgot Your Password?" CvType="Button" DesignTimeRectangle="424, 777, 214, 42" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                 Forgot Your Password?                             ' tag='A' type='' class='btn bg-warning' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Forgot Your Password?' /&gt;" Guid="e0efd7be-f117-4015-bd84-1fda8df6ceab" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
                   </uix:TargetAnchorable>
@@ -227,13 +221,81 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="483.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <ui:UiElementExists DisplayName="Element Exists - Dashboard" Exists="[Dashboard_Exists]" sap:VirtualizedContainerService.HintSize="483.2,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+      <uix:NCheckState DisplayName="Check App State 'Dashboard'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1019.2,992.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V5">
+        <uix:NCheckState.IfExists>
+          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,228.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;logged in successfully&quot;]" />
+          </Sequence>
+        </uix:NCheckState.IfExists>
+        <uix:NCheckState.IfNotExists>
+          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="516.8,742.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;failed to log in&quot;]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge ACME System 1 - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,506.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="222615fc-13a3-408d-b8fd-ad6a147a20b7" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,226.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="416,118.4" sap2010:WorkflowViewState.IdRef="Activate_4">
+                      <ui:Activate.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3de4b62c-73b2-4cee-9da9-26c1347d0d52">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Activate.Target>
+                    </ui:Activate>
+                    <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Edge" ContentHash="jUjJn4_87kOqwZh7RtVMMA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASJSURBVFhHvZdtbFNlFMePblYqvkYTRFyCLOrQhC9CjB80KCqaiCF80C+CRhIZClHJ3AsDt+6FjnbttIyXzRfI3NiYZIm46AcDm4XRN9a1XStu6waL2dgq2xhTTJZtj/9zy23vZltZafnwb/Pc3uf5/3ruec55LtEeZz90FRq/xWLPiwwgQipltYfHCRfWZg/lNXyMhQaac4LybYJ22ZOjfBbWZ4gyyXOEAcZJiwF+XHvM31jlubwx79fBzJw4Jc/NahnM3GkOisfZrYOZWuvw+ztODRRTCSJRJEV6NAjARJ/bxYamC2sAQFiEMCkuyXMBQDCXxGMAEAAIAKTa2wE/h8AfVwAUOcRL9f7tyQb42j2yPJUBCucC4MLrjb0fJQpgaHJm2crKzrbVDf4qHssAVc7LT0QFWJsgACHEQyllLkEfmgVtMYtdbUMnZACjbTg6wBvfhwHS9nur1Tq3EzvD+UpjrymSGWvFN7+bqeic416D25NS4tzMc1svXdtEm1sEVXgEfdKGjO8QMkC5LRAdYN3xMIBa77pGhdiWORax8khXIJI5a0mlV1CuRVAx7tW0H74OQOlfnRe07bSkpt5xzbwB7jN6LFSMrbLTJp6r7T4ZyZy17KBvStrbKDIPfOEpUADQ7paBDbnWwFMACOXAoVg5MAvA4LEpAFoimbMAMMP3MMBCvbtwDgABgIb/nr5NBqh2jSQPQFXWEQJYesAn1Hgsd+k6BPKpQgao8YwmGOCQb1oGUCsicI/RLegz5AZKsErn0skAdd7EA4QioATAvxa0G7Ufze1hU2ehDFCbaID0KACP8u5gANT9RV/GAXC/8YYBIj6CuADeVAAs2OuyS10LW2xVTfepSOasjGrfpASgxb2lTs1NASgrIZLIiwonKNsi1jT4f45kzko7EDZaaHDrbwrghaP+EMC7P/WfoE/PCso6K56t6xmMZM5K1SHb0copxypMzsBWGeCRfXEAPF8bBjjsG90ilVJuKngMXVcnH5trPiPECsqzcgmWttvFvyYXywCLTJ3zB3i5YRYAqcthnodF+OYCh8g/fek9vT2QUf/b2PLc1oFs4l5RgrnbzohnaruvAECaGysCNbEAXlO0YwZo/mNiK71zEhmO3zkfEGZVOULO4ywUGT5DsskHZjE2LV5VAqRxDvCjQR1YbPIW3FAEIgDQ28397bQDufAx2ipP4s7HB0xEhK+rNA6x8ZcBHQBICUBamGw/IyUxorRfBqj3zR+AmvsmVr3V1PfjgzqXuBu1PRX9fYnRM7Hphwvf9f8zpYJoLsCLR3uupO/rnHqyyidW1/mzZYAjnhjNKAYAAYAAQAAgABAACADE5lEACAAEAAJAqB0fdMYAwJEsdChNFsC3rpGMqAA4lK67BQB0Jx7jf4/lyOb1x/tKj50fW1phDzytt86WDjJAZZYhaWyIcM//qdL55+M66/D6VE5QJC+8JYDgqxkgUvDDAiTa7fjmMCVad0C0B+LaEXwdlF7NggN+V+PXJd5eTJcMyWvLnix89ECjUECS9vp3MjR7bXg6u/4FPqMYP5QOgtAAAAAASUVORK5CYII=" InformativeScreenshot="7d0d0d4be3126c644d128999dfb119de.jpg" Reference="97LSBvNUAE6bl1u1a4QJHA/LkDBuGlWQEysHdwEL1xStQ" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" Url="https://acme-test.uipath.com/" Version="V2" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </uix:NCheckState.IfNotExists>
+        <uix:NCheckState.Target>
+          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com" CVScreenId="9c0f6725-a7d0-4db7-8785-c23eac97d151" ContentHash="18ZgUYP95kWIu_dSsMS1ng" CvTextArea="246, 317, 221, 37" CvTextArgument="Dashboard" CvType="Text" DesignTimeRectangle="247, 313, 1425, 61" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" Guid="d189f4c2-c631-4d53-989a-2dfe39e3b283" InformativeScreenshot="02aa3e45cbf20bf8369aff5cb91d87b0.png" Reference="97LSBvNUAE6bl1u1a4QJHA/DDRm-YzGSEWM7KwKPDIkXg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+            <uix:TargetAnchorable.Anchors>
+              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                <uix:Target CVScreenId="9c0f6725-a7d0-4db7-8785-c23eac97d151" CvTextArea="244, 219, 166, 21" CvTextArgument="ACME System 1" CvType="Text" DesignTimeRectangle="228, 200, 203, 63" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='A' type='' class='navbar-brand' aaname='ACME System 1' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='ACME System 1' /&gt;" Guid="f85a26ed-f0db-4e0f-b31f-32f7ef01d8f9" SearchSteps="FuzzySelector, CV" />
+              </scg:List>
+            </uix:TargetAnchorable.Anchors>
+          </uix:TargetAnchorable>
+        </uix:NCheckState.Target>
+      </uix:NCheckState>
+      <ui:UiElementExists DisplayName="Element Exists - Dashboard" Exists="[Dashboard_Exists]" sap:VirtualizedContainerService.HintSize="1019.2,139.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d8c237d-835f-4ab4-83aa-7ff611851ac0" InformativeScreenshot="45e1a6b7eb693ce6e464d22bb7c97760" Selector="&lt;html app='msedge.exe' title='ACME*Dashboard' /&gt;&lt;webctrl tag='H1' innertext='*Dashboard*' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0d8c237d-835f-4ab4-83aa-7ff611851ac0" InformativeScreenshot="45e1a6b7eb693ce6e464d22bb7c97760" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;&lt;webctrl tag='H1' innertext='*Dashboard*' /&gt;" TimeoutMS="30000" WaitForReady="COMPLETE" />
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
-      <If Condition="[Dashboard_Exists]" sap:VirtualizedContainerService.HintSize="483.2,468" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[Dashboard_Exists]" sap:VirtualizedContainerService.HintSize="1019.2,468" sap2010:WorkflowViewState.IdRef="If_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
         <If.Then>
           <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
@@ -269,7 +331,7 @@
           </Sequence>
         </If.Else>
       </If>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login Status &quot; + Out_LoginStatus.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1019.2,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login Status &quot; + Out_LoginStatus.ToString]" />
     </Sequence>
   </Sequence>
 </Activity>
