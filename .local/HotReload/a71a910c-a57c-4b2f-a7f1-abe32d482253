@@ -102,35 +102,35 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SHA1Online_ProcessHash" sap:VirtualizedContainerService.HintSize="949.2,1715.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SHA1Online_ProcessHash" sap:VirtualizedContainerService.HintSize="922.8000000000001,1753.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="585.6,1482.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="585.6,1520.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge SHA1 online" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="552,1390.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="1a8d7767-a0c0-4679-9f6e-f2124db61ee4" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge SHA1 online" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="552,1428.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="1a8d7767-a0c0-4679-9f6e-f2124db61ee4" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,1150.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,1148.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1a8d7767-a0c0-4679-9f6e-f2124db61ee4" Text="[in_HashFormula]" Timeout="30" Version="V5">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT textToHashId'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="484.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1a8d7767-a0c0-4679-9f6e-f2124db61ee4" Text="[in_HashFormula]" Version="V5">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="983655de-f924-4d07-b7d1-d3bd0e6e24a4" ContentHash="3xPAyzrh-kSlr6o12T2mwA" CvElementArea="723, 426, 415, 28" CvType="InputBox" DesignTimeRectangle="723, 427, 415, 27" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' /&gt;" Guid="96ff3303-f9d6-4c15-bb1d-7464d6bdb13c" InformativeScreenshot="cea20abd78e6685826444826c335876d.png" Reference="97LSBvNUAE6bl1u1a4QJHA/6xH3bOZ5ZEa12xDyVGLGHw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                         <uix:Target CVScreenId="983655de-f924-4d07-b7d1-d3bd0e6e24a4" CvElementArea="1135, 425, 61, 29" CvTextArea="1145, 431, 41, 16" CvTextArgument="hash" CvType="Button" DesignTimeRectangle="1138, 427, 58, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='' aaname='hash' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='hash' /&gt;" Guid="bef1b6d3-692f-4596-9ef1-7c9c6f16047b" SearchSteps="FuzzySelector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
@@ -151,7 +151,7 @@
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="sha1-online.com" CVScreenId="983655de-f924-4d07-b7d1-d3bd0e6e24a4" ContentHash="TQ4zSj-6CkaqLxIjqoQWvQ" CvElementArea="1135, 425, 61, 29" CvTextArea="1145, 431, 41, 16" CvTextArgument="hash" CvType="Button" DesignTimeRectangle="1138, 427, 58, 27" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" Guid="70fc0216-8749-4b31-b5db-042f232c4190" InformativeScreenshot="2c8e4302eafe070864ed3656c80798a0.png" Reference="97LSBvNUAE6bl1u1a4QJHA/Pa9j5UZLXUSz5Lle25JsuA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='SHA1 online' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                         <uix:Target CVScreenId="983655de-f924-4d07-b7d1-d3bd0e6e24a4" CvElementArea="723, 426, 415, 28" CvType="InputBox" DesignTimeRectangle="723, 427, 415, 27" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='textToHashId' tag='INPUT' /&gt;" Guid="c78545b0-18b1-4b05-9d74-d779670209aa" SearchSteps="Selector, CV" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
